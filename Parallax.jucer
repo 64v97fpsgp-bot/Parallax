@@ -9,15 +9,15 @@
     <GROUP id="{406738F7-188F-9230-1F6A-F3D407255DEA}" name="Source">
       <GROUP id="{07C1155F-0BB8-4F2C-3F5D-71674358850A}" name="Resources">
         <FILE id="VAuboN" name="BarlowCondensed-Bold.ttf" compile="0" resource="1"
-              file="../Resources/BarlowCondensed-Bold.ttf"/>
+              file="Resources/BarlowCondensed-Bold.ttf"/>
         <FILE id="S8viEE" name="BarlowCondensed-LightItalic.ttf" compile="0"
-              resource="1" file="../Resources/BarlowCondensed-LightItalic.ttf"/>
+              resource="1" file="Resources/BarlowCondensed-LightItalic.ttf"/>
         <FILE id="FX9jMW" name="BarlowCondensed-Regular.ttf" compile="0" resource="1"
-              file="../Resources/BarlowCondensed-Regular.ttf"/>
+              file="Resources/BarlowCondensed-Regular.ttf"/>
         <FILE id="n4tSbk" name="BarlowCondensed-SemiBold.ttf" compile="0" resource="1"
-              file="../Resources/BarlowCondensed-SemiBold.ttf"/>
+              file="Resources/BarlowCondensed-SemiBold.ttf"/>
         <FILE id="ElXR80" name="SML-LOGO-Parallax.png" compile="0" resource="1"
-              file="../Resources/SML-LOGO-Parallax.png"/>
+              file="Resources/SML-LOGO-Parallax.png"/>
       </GROUP>
       <FILE id="gXj7uk" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
