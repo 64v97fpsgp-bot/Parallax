@@ -1,0 +1,39 @@
+name: Build Parallax
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download JUCE
+        run: |
+          curl -L https://github.com/juce-framework/JUCE/releases/download/8.0.12/juce-8.0.12-windows.zip -o juce.zip
+          Expand-Archive juce.zip -DestinationPath C:\JUCE_extracted
+          Move-Item C:\JUCE_extracted\* C:\JUCE
+        shell: pwsh
+
+      - name: Generate JuceLibraryCode
+        run: |
+          C:\JUCE\Projucer.exe --resave Parallax.jucer
+        shell: pwsh
+
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build VST3
+        run: |
+          cd Builds/VisualStudio2022
+          msbuild Parallax.sln /p:Configuration=Release /p:Platform=x64
+        shell: pwsh
+
+      - name: Upload VST3
+        uses: actions/upload-artifact@v4
+        with:
+          name: Parallax-Windows-VST3
+          path: Builds/VisualStudio2022/x64/Release/VST3/Parallax.vst3
