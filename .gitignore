@@ -1,0 +1,10 @@
+Builds/MacOSX/build/
+Builds/MacOSX/DerivedData/
+*.o
+*.a
+*.d
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+JuceLibraryCode/
+.DS_Store
